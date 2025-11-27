@@ -283,14 +283,20 @@
           For any further question, feel free to reach me out by the form below
         </p>
 
-        <form action="https://formspree.io/f/xldvjrwd" method="POST">
+        <form id="form" action="https://formspree.io/f/xldvjrwd" method="POST">
           <div class="forms">
             <label for="name">Name</label>
             <input type="text" name="Name" id="name" class="input" required />
           </div>
           <div class="forms">
             <label for="email">Email</label>
-            <input type="email" name="Email" id="email" class="input" required />
+            <input
+              type="email"
+              name="Email"
+              id="email"
+              class="input"
+              required
+            />
           </div>
           <div class="forms">
             <label for="subject">Subject</label>
@@ -313,11 +319,10 @@
             ></textarea>
           </div>
           <div class="forms">
-            <input type="hidden" name="_format" value="plain">
+            <input type="hidden" name="_format" value="plain" />
           </div>
-          <button type="submit"><i data-feather="send"></i>Send Message</button>
+          <button type="submit" id="submit"><i data-feather="send"></i>Send Message</button>
         </form>
-        <button id="submit">Test Button</button>
       </div>
     </main>
 

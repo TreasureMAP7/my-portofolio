@@ -1,0 +1,730 @@
+:root {
+  --primary: #0b409c;
+  --secondary: #306acf;
+  --background: #f2f7ff;
+  --background-secondary: #e5eaf3;
+  --box: #c8d0df;
+  --box-secondary: #c8d0df7d;
+  --light: #c6d6f0;
+  --light-secondary: #f3f7ff;
+  --dark: #283135;
+  --dark-secondary: #3a464d;
+  --modal: #f2f7ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+  border: none;
+  background: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  background: var(--background);
+}
+
+.navbar {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  gap: 1rem;
+  background-color: var(--primary);
+  color: var(--light);
+  box-shadow: 0px 8px 16px 0px #00000045;
+  top: 0;
+  z-index: 1;
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--light-secondary);
+}
+
+.logo span {
+  color: var(--light);
+}
+
+.navbar-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 50%;
+  max-width: 600px;
+  min-width: 100px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 4px 8px;
+}
+
+.navbar-icon input {
+  padding: 7px 0px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.navbar-icon .search-icon {
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar-icon .search-icon:hover {
+  color: var(--secondary);
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navbar-item a {
+  font-weight: 600;
+  color: var(--light);
+  transition: all 0.2s ease;
+}
+
+.navbar-item a:hover {
+  color: var(--light-secondary);
+  text-decoration: underline 1px;
+}
+
+.navbar-dropdown {
+  display: none;
+}
+
+.navbar-dropdown .dropdown-icon {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar-dropdown .dropdown-icon:hover {
+  color: var(--light-secondary);
+}
+
+.navbar-dropdown .dropdown-content {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 100%;
+  box-shadow: 0px 8px 16px 0px #00000045;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.navbar-dropdown .dropdown-content a {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  background-color: var(--primary);
+  color: var(--light);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.navbar-dropdown .dropdown-content a:hover {
+  background-color: var(--secondary);
+  color: var(--light-secondary);
+}
+
+.navbar-dropdown .dropdown-show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.home {
+  padding: 50px 4rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark);
+  background-color: var(--background);
+  scroll-margin-top: 40px;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jumbotron h1 {
+  font-size: 4rem;
+}
+
+.jumbotron p {
+  font-size: 2rem;
+}
+
+.profile {
+  display: flex;
+  gap: 40px;
+  margin-top: 4rem;
+}
+
+.profile .about {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: start;
+}
+
+.profile .arrow {
+  position: absolute;
+  rotate: 175deg;
+  transform: scaleY(-1);
+  width: 12rem;
+  left: 20%;
+}
+
+.profile h2 {
+  text-align: left;
+  margin-top: 12rem;
+  font-size: 2rem;
+}
+
+.profile p {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.profile .cv {
+  position: relative;
+  margin-top: 3rem;
+  padding: 8px 10px;
+  border: #283135 4px solid;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 200px;
+  align-self: end;
+  color: var(--dark);
+  transition: all 0.2s ease;
+}
+
+.profile .cv:hover {
+  border: var(--primary) 4px solid;
+  background-color: var(--primary);
+  color: var(--light-secondary);
+}
+
+.profile .picture {
+  display: flex;
+  position: relative;
+  justify-content: end;
+}
+
+.profile .square {
+  position: absolute;
+  width: 75px;
+  left: -18%;
+  top: -8%;
+  rotate: -25deg;
+}
+
+.profile .photo {
+  width: 14rem;
+  height: 100%;
+  align-items: center;
+  border-radius: 20px;
+  bottom: 0;
+  object-fit: cover;
+  outline: 4px solid #283135;
+  outline-offset: 4px;
+}
+
+.skill {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-secondary);
+  padding: 50px 4rem;
+  scroll-margin-top: 40px;
+}
+
+.skill h1 {
+  font-size: 4rem;
+}
+
+.skill .skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+.skill .skill-box {
+  transition: all 0.2s ease;
+}
+
+.skill .skill-box:hover {
+  transform: scale(1.15);
+}
+
+.skill .skill-box img {
+  background-color: var(--box);
+  box-shadow: 0px 2px 4px 0px #00000045;
+  border-radius: 20px;
+  width: 140px;
+  padding: 25px;
+  transition: all 0.2s ease;
+}
+
+.skill .skill-box:hover img {
+  background: var(--box-secondary);
+  box-shadow: 0px 4px 8px 0px #00000025;
+}
+
+.skill .skill-box p {
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+.project {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 4rem;
+  background-color: var(--background);
+  scroll-margin-top: 40px;
+}
+
+.project h1 {
+  font-size: 4rem;
+}
+
+.project .projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  gap: 60px;
+  justify-content: space-around;
+}
+
+.project .project-box {
+  transition: all 0.2s ease;
+}
+
+.project .project-box:hover {
+  transform: scale(1.07);
+  cursor: default;
+}
+
+.project .project-box img {
+  width: 360px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 0px 4px 16px 0px #00000045;
+}
+
+.project .project-box h2 {
+  margin-top: 10px;
+}
+
+.project .project-container {
+  display: block;
+  position: relative;
+}
+
+.project .project-container .project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000080;
+  border-radius: 30px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.project .project-container:hover .project-overlay {
+  opacity: 1;
+  cursor: default;
+}
+
+.project .project-overlay button {
+  color: var(--light-secondary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border: #e5eaf3 2px solid;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.project .project-overlay button:hover {
+  background-color: var(--secondary);
+  border: var(--secondary) 2px solid;
+  cursor: pointer;
+}
+
+.project .projects-modal h1 {
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.project .projects-modal p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.project .modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000045;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  padding: 4rem;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+}
+
+.modal-container.modal-show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.project .modal {
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  background-color: var(--modal);
+  box-shadow: 0px 4px 16px 0px #0000004e;
+  z-index: 3;
+  width: 80vw;
+}
+
+.project .modal aside {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.project .modal .close {
+  color: var(--dark);
+  width: 3rem;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.project .modal .close:hover {
+  color: var(--dark-secondary);
+}
+
+.project .modal button {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.project .modal a {
+  bottom: 0;
+  right: 0;
+  display: flex;
+  position: absolute;
+  color: var(--light-secondary);
+  background-color: var(--primary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.project .modal a:hover {
+  background-color: var(--secondary);
+}
+
+.project .modal img {
+  width: 12rem;
+  height: 20rem;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 5rem;
+  background-color: var(--background-secondary);
+  scroll-margin-top: 40px;
+}
+
+.contact h1 {
+  font-size: 4rem;
+}
+
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 500px;
+}
+
+.contact .forms {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.contact label {
+  position: absolute;
+  top: -10px;
+  left: 8px;
+  padding: 0px 4px;
+  background-color: var(--background-secondary);
+  font-weight: 600;
+}
+
+.contact input {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid var(--dark-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+  box-shadow: 0px 1px 2px 0px #0000004e;
+  transition: all 0.2s ease;
+}
+
+.contact input:hover {
+  border: 1px solid var(--dark);
+  box-shadow: 0px 3px 2px 0px #0000004e;
+}
+
+.contact textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid var(--dark-secondary);
+  text-align: justify;
+  font-weight: 400;
+  resize: none;
+  height: 10rem;
+  width: 100%;
+  box-shadow: 0px 1px 2px 0px #0000004e;
+  transition: all 0.2s ease;
+}
+
+.contact textarea:hover {
+  border: 1px solid var(--dark);
+  box-shadow: 0px 3px 2px 0px #0000004e;
+}
+
+.contact button {
+  display: flex;
+  color: var(--light-secondary);
+  background-color: var(--primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 10px;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.contact button:hover {
+  background-color: var(--secondary);
+}
+
+footer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  gap: 20px;
+  padding: 1rem;
+}
+
+footer p {
+  color: var(--light-secondary);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+footer .icon {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .icon a {
+  color: var(--light);
+  transition: all 0.2s ease;
+}
+
+footer .icon a:hover {
+  color: var(--light-secondary);
+}
+
+@media screen and (max-width: 840px) {
+  .project .modal {
+    flex-direction: column;
+  }
+  .project .modal img {
+    width: 100%;
+    height: 12rem;
+  }
+  .project .modal p {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .navbar-dropdown {
+    display: flex;
+  }
+  .navbar-item {
+    display: none;
+  }
+  .jumbotron h1 {
+    font-size: 3rem;
+  }
+  .jumbotron p {
+    font-size: 1.5rem;
+  }
+  .profile {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .profile .arrow {
+    display: none;
+  }
+  .profile h2 {
+    margin-top: 0px;
+    text-align: center;
+  }
+  .profile .cv {
+    align-self: center;
+  }
+  .contact form {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    padding: 10px 40px;
+  }
+  .home {
+    padding: 40px;
+  }
+  .jumbotron h1 {
+    font-size: 2rem;
+  }
+  .jumbotron p {
+    font-size: 1rem;
+  }
+  .about h2 {
+    font-size: 1.5rem;
+  }
+  .about p {
+    font-size: 0.8rem;
+  }
+  .skill {
+    padding: 20px 40px;
+  }
+  .skill h1 {
+    font-size: 3rem;
+  }
+  .skill .skills {
+    gap: 10px;
+  }
+  .skill .skill-box {
+    transform: scale(0.75);
+  }
+  .skill .skill-box:hover {
+    transform: scale(0.86);
+  }
+  .project {
+    padding: 20px 40px;
+  }
+  .project h1 {
+    font-size: 3rem;
+  }
+  .project .projects {
+    margin-top: 20px;
+    gap: 0px;
+    justify-content: center;
+  }
+  .project .project-box {
+    transform: scale(0.7);
+    gap: 10px;
+  }
+  .project .project-box:hover {
+    transform: scale(0.75);
+  }
+  .project .modal {
+    gap: 0px;
+  }
+  .project .modal button {
+    width: 1.75rem;
+  }
+  .project .modal img {
+    display: none;
+  }
+  .project .modal h1 {
+    font-size: 1.75rem;
+  }
+  .project .modal p {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .project .modal a {
+    position: relative;
+    justify-content:   center;
+    font-size: 1rem;
+  }
+  .contact {
+    padding: 40px;
+  }
+  .contact h1 {
+    font-size: 3rem;
+  }
+  .contact p {
+    font-size: 1rem;
+  }
+  .contact form {
+    width: 300px;
+  }
+}

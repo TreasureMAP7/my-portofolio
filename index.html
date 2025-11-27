@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=;, initial-scale=1.0" />
+    <title>My Portofolio</title>
+
+    <!-- Font by Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon by Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <link rel="icon" href="assets/personal-icon.png" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="#">Miftah <span>Portofolio</span></a>
+      </div>
+
+      <!-- Navigation -->
+      <div class="navbar-item">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skill">Skills</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Contact</a> |
+        <a href="https://github.com/TreasureMAP7"
+          ><i data-feather="github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/miftah-akhdani-putra-tb-3a42b9385/"
+          ><i data-feather="linkedin"></i
+        ></a>
+        <a href="https://www.instagram.com/_tatahdani/"
+          ><i data-feather="instagram"></i
+        ></a>
+      </div>
+
+      <!-- Dropdown -->
+      <div class="navbar-dropdown">
+        <div class="dropdown-icon" id="dropdown-icon">
+          <i data-feather="menu"></i>
+        </div>
+        <div class="dropdown-content" id="dropdown-content">
+          <a href="#home" class="dropdown-anchor">Home</a>
+          <a href="#about" class="dropdown-anchor">About</a>
+          <a href="#skill" class="dropdown-anchor">Skills</a>
+          <a href="#project" class="dropdown-anchor">Projects</a>
+          <a href="#contact" class="dropdown-anchor">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Home -->
+      <div class="home" id="home">
+        <!-- Jumbotron -->
+        <section class="jumbotron">
+          <h1>Miftah Akhdani Putra</h1>
+          <p>I'm a full-stack developer</p>
+        </section>
+
+        <!-- Profile Photo and Description -->
+        <section class="profile">
+          <!-- Description -->
+          <div class="about" id="about">
+            <img src="assets/arrow-down.png" alt="arrow" class="arrow" />
+            <h2>About Me</h2>
+            <p>
+              My name is Miftah Akhdani Putra, I'm a dedicated software engineer
+              student at SMK Taruna Bhakti Depok, I chose software engineering
+              because I had interests in developing websites in my own way.
+              Besides that, I also want to learn proper UI/UX design and master
+              several programming languages such as JavaScript, Java, Python,
+              and Kotlin.
+            </p>
+            <a class="cv" href="" download="">Download CV</a>
+          </div>
+
+          <!-- Picture -->
+          <div class="picture">
+            <img src="assets/square.png" alt="square" class="square" />
+            <img src="assets/picture.jpg" alt="profile" class="photo" />
+          </div>
+        </section>
+      </div>
+
+      <!-- Skills -->
+      <div class="skill" id="skill">
+        <!-- Header -->
+        <h1>Skills</h1>
+
+        <!-- Skills Box -->
+        <section class="skills">
+          <div class="skill-box">
+            <img src="assets/skill/html.png" alt="html" />
+            <p>HTML</p>
+          </div>
+          <div class="skill-box">
+            <img src="assets/skill/css.png" alt="css" />
+            <p>CSS</p>
+          </div>
+          <div class="skill-box">
+            <img src="assets/skill/js.png" alt="js" />
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-box">
+            <img src="assets/skill/python.png" alt="python" />
+            <p>Python</p>
+          </div>
+          <div class="skill-box">
+            <img src="assets/skill/java.png" alt="java" />
+            <p>Java</p>
+          </div>
+          <div class="skill-box">
+            <img src="assets/skill/illustrator.png" alt="illustrator" />
+            <p>Adobe Illustrator</p>
+          </div>
+          <div class="skill-box">
+            <img src="assets/skill/figma.png" alt="figma" />
+            <p>Figma</p>
+          </div>
+          <div class="skill-box">
+            <img src="assets/skill/react.png" alt="react" />
+            <p>React</p>
+          </div>
+          <div class="skill-box">
+            <img src="assets/skill/php.png" alt="php" />
+            <p>PHP</p>
+          </div>
+          <div class="skill-box">
+            <img src="assets/skill/sql.png" alt="SQL" />
+            <p>SQL</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Projects -->
+      <div class="project" id="project">
+        <!-- Header -->
+        <h1>Projects</h1>
+
+        <!-- Project -->
+        <section class="projects">
+          <div class="project-box">
+            <div class="project-container">
+              <img src="assets/Orca.jpeg" alt="project" />
+              <div class="project-overlay">
+                <button id="orca-open">View Details</button>
+              </div>
+            </div>
+            <h2>Orca Wiki</h2>
+          </div>
+
+          <div class="project-box">
+            <div class="project-container">
+              <img src="assets/solar.jpg" alt="project" />
+              <div class="project-overlay">
+                <button id="solar-open">View Details</button>
+              </div>
+            </div>
+            <h2>SolaWiki</h2>
+          </div>
+
+          <div class="project-box">
+            <div class="project-container">
+              <img src="assets/calculator.webp" alt="project" />
+              <div class="project-overlay">
+                <button id="calc-open">View Details</button>
+              </div>
+            </div>
+            <h2>Calculator</h2>
+          </div>
+
+          <div class="project-box">
+            <div class="project-container">
+              <img src="assets/todo.webp" alt="project" />
+              <div class="project-overlay">
+                <button id="todo-open">View Details</button>
+              </div>
+            </div>
+            <h2>To-do Manager</h2>
+          </div>
+        </section>
+
+        <!-- Modal -->
+        <section class="projects-modal">
+          <div class="modal-container" id="orca">
+            <div class="modal">
+              <picture><img src="assets/Orca.jpeg" alt="orcawiki" /></picture>
+              <aside>
+                <button id="orca-close">
+                  <i data-feather="x" class="close"></i>
+                </button>
+                <h1>Orca Wiki</h1>
+                <p>
+                  A simple informative website wiki-like to show anything about
+                  one of my favorite ocean hunter, Orca. This website contains
+                  information about how does Orca look like, where is their
+                  habitat and how their diet usually work. I chose Orca as the
+                  subject because I interested in learning more about this
+                  mischievous apex predator.
+                </p>
+                <a class="github" href="#">Open Github</a>
+              </aside>
+            </div>
+          </div>
+
+          <div class="modal-container" id="solar">
+            <div class="modal">
+              <picture><img src="assets/solar.jpg" alt="solawiki" /></picture>
+              <aside>
+                <button id="solar-close">
+                  <i data-feather="x" class="close"></i>
+                </button>
+                <h1>SolaWiki</h1>
+                <p>
+                  A simple informative website wiki-like to show any information
+                  about our solar system. This website contains information
+                  about each planet's characteristic and special features.
+                </p>
+                <a class="github" href="#">Open Github</a>
+              </aside>
+            </div>
+          </div>
+
+          <div class="modal-container" id="calc">
+            <div class="modal">
+              <picture
+                ><img src="assets/calculator.webp" alt="calculator"
+              /></picture>
+              <aside>
+                <button id="calc-close">
+                  <i data-feather="x" class="close"></i>
+                </button>
+                <h1>Calculator</h1>
+                <p>
+                  A simple, helpful prototype for daily arithmetics problem.
+                  This prototype included several basic arithmetic operations
+                  such as addition, substraction, multiplication, division. This
+                  prototype also supported decimal number and negative number.
+                </p>
+                <a class="github" href="#">Open Github</a>
+              </aside>
+            </div>
+          </div>
+
+          <div class="modal-container" id="todo">
+            <div class="modal">
+              <picture><img src="assets/todo.webp" alt="todo" /></picture>
+              <aside>
+                <button id="todo-close">
+                  <i data-feather="x" class="close"></i>
+                </button>
+                <h1>To-do Manager</h1>
+                <p>
+                  A simple prototype program made using JavaScript that utilized
+                  tools for daily productivity. This program included several
+                  essential features such as create new tasks, show tasks list,
+                  rename tasks, and delete tasks.
+                </p>
+                <a class="github" href="#">Open Github</a>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="contact" id="contact">
+        <h1>Contact Me</h1>
+        <p>
+          For any further question, feel free to reach me out by the form below
+        </p>
+
+        <form action="https://formspree.io/f/xldvjrwd" method="POST">
+          <div class="forms">
+            <label for="name">Name</label>
+            <input type="text" name="Name" id="name" class="input" required />
+          </div>
+          <div class="forms">
+            <label for="email">Email</label>
+            <input type="email" name="Email" id="email" class="input" required />
+          </div>
+          <div class="forms">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              name="Subject"
+              id="subject"
+              class="input"
+              required
+            />
+          </div>
+          <div class="forms">
+            <label for="message">Message</label>
+            <textarea
+              type="text"
+              name="Message"
+              id="message"
+              class="input"
+              required
+            ></textarea>
+          </div>
+          <div class="forms">
+            <input type="hidden" name="_format" value="plain">
+          </div>
+          <button type="submit"><i data-feather="send"></i>Send Message</button>
+        </form>
+        <button id="submit">Test Button</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Miftah Akhdani Putra &copy; 2025</p>
+      <div class="icon">
+        <a href="https://github.com/TreasureMAP7"
+          ><i data-feather="github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/miftah-akhdani-putra-tb-3a42b9385/"
+          ><i data-feather="linkedin"></i
+        ></a>
+        <a href="https://www.instagram.com/_tatahdani/"
+          ><i data-feather="instagram"></i
+        ></a>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

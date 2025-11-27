@@ -260,7 +260,7 @@ html {
   flex-wrap: wrap;
   margin-top: 4rem;
   gap: 60px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .skill .skill-box {

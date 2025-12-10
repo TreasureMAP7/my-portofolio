@@ -373,17 +373,6 @@ html {
   cursor: pointer;
 }
 
-.project .projects-modal h1 {
-  text-align: left;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.project .projects-modal p {
-  font-size: 1rem;
-  text-align: justify;
-}
-
 .project .modal-container {
   display: flex;
   justify-content: center;
@@ -401,18 +390,20 @@ html {
   z-index: 2;
 }
 
-.modal-container.modal-show {
+.project .modal-container.modal-show {
   pointer-events: auto;
   opacity: 1;
 }
 
 .project .modal {
+  position: relative;
   gap: 2rem;
   padding: 2rem;
   border-radius: 20px;
   display: flex;
   background-color: var(--modal);
   box-shadow: 0px 4px 16px 0px #0000004e;
+  justify-content: center;
   z-index: 3;
   width: 80vw;
 }
@@ -423,7 +414,33 @@ html {
   position: relative;
 }
 
+.project .modal h1 {
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.project .modal .h1-s {
+  display: none;
+}
+
+.project .modal p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.project .modal button {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+}
+
 .project .modal .close {
+  position: absolute;
+  right: 20px;
+  top: 35px;
   color: var(--dark);
   width: 3rem;
   height: auto;
@@ -433,12 +450,6 @@ html {
 
 .project .modal .close:hover {
   color: var(--dark-secondary);
-}
-
-.project .modal button {
-  display: flex;
-  position: absolute;
-  right: 0;
 }
 
 .project .modal a {
@@ -464,6 +475,10 @@ html {
   height: 20rem;
   border-radius: 5px;
   object-fit: cover;
+}
+
+.project .modal .orca-img {
+  object-position: 10% 50%;
 }
 
 .contact {
@@ -597,7 +612,7 @@ footer .icon a:hover {
   color: var(--light-secondary);
 }
 
-@media screen and (max-width: 840px) {
+/* @media screen and (max-width: 840px) {
   .project .modal {
     flex-direction: column;
   }
@@ -608,7 +623,7 @@ footer .icon a:hover {
   .project .modal p {
     margin-bottom: 100px;
   }
-}
+} */
 
 @media screen and (max-width: 812px) {
   .navbar-dropdown {
@@ -636,6 +651,22 @@ footer .icon a:hover {
   }
   .profile .cv {
     align-self: center;
+  }
+  .project .modal {
+    flex-direction: column;
+  }
+  .project .modal img {
+    width: 100%;
+    height: 12rem;
+  }
+  .project .modal .h1-l {
+    display: none;
+  }
+  .project .modal .h1-s {
+    display: inline;
+  }
+  .project .modal p {
+    margin-bottom: 100px;
   }
   .contact form {
     width: 400px;
@@ -695,24 +726,25 @@ footer .icon a:hover {
     transform: scale(0.75);
   }
   .project .modal {
-    gap: 0px;
-  }
-  .project .modal button {
-    width: 1.75rem;
+    gap: 0.5rem;
   }
   .project .modal img {
-    display: none;
+    height: 100px;
+  }
+  .project .modal .close {
+    width: 1.6rem;
+    right: 25px;
   }
   .project .modal h1 {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
   .project .modal p {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     margin-bottom: 1rem;
   }
   .project .modal a {
     position: relative;
-    justify-content:   center;
+    justify-content: center;
     font-size: 1rem;
   }
   .contact {

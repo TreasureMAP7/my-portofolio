@@ -68,13 +68,13 @@
       <!-- Home -->
       <div class="home" id="home">
         <!-- Jumbotron -->
-        <section class="jumbotron">
+        <div class="jumbotron">
           <h1>Miftah Akhdani Putra</h1>
           <p>I'm a full-stack developer</p>
-        </section>
+        </div>
 
         <!-- Profile Photo and Description -->
-        <section class="profile">
+        <div class="profile">
           <!-- Description -->
           <div class="about" id="about">
             <img src="assets/arrow-down.png" alt="arrow" class="arrow" />
@@ -87,7 +87,10 @@
               several programming languages such as JavaScript, Java, Python,
               and Kotlin.
             </p>
-            <a class="cv" href="" download="">Download CV</a>
+            <!-- CV -->
+            <a class="cv" href="assets/CV_MIftah_Akhdani_Putra.pdf" download=""
+              >Download CV</a
+            >
           </div>
 
           <!-- Picture -->
@@ -95,7 +98,7 @@
             <img src="assets/square.png" alt="square" class="square" />
             <img src="assets/picture.jpg" alt="profile" class="photo" />
           </div>
-        </section>
+        </div>
       </div>
 
       <!-- Skills -->
@@ -104,7 +107,7 @@
         <h1>Skills</h1>
 
         <!-- Skills Box -->
-        <section class="skills">
+        <div class="skills">
           <div class="skill-box">
             <img src="assets/skill/html.png" alt="html" />
             <p>HTML</p>
@@ -145,7 +148,7 @@
             <img src="assets/skill/sql.png" alt="SQL" />
             <p>SQL</p>
           </div>
-        </section>
+        </div>
       </div>
 
       <!-- Projects -->
@@ -154,129 +157,142 @@
         <h1>Projects</h1>
 
         <!-- Project -->
-        <section class="projects">
-          <div class="project-box">
-            <div class="project-container">
-              <img src="assets/Orca.jpeg" alt="project" />
-              <div class="project-overlay">
-                <button id="orca-open">View Details</button>
+        <div class="projects">
+          <section class="orca">
+            <figure class="project-box">
+              <div class="project-container">
+                <img src="assets/Orca.jpeg" alt="project" />
+                <div class="project-overlay">
+                  <button id="orca-open">View Details</button>
+                </div>
               </div>
-            </div>
-            <h2>Orca Wiki</h2>
-          </div>
+              <h2>Orca Wiki</h2>
+            </figure>
 
-          <div class="project-box">
-            <div class="project-container">
-              <img src="assets/solar.jpg" alt="project" />
-              <div class="project-overlay">
-                <button id="solar-open">View Details</button>
-              </div>
-            </div>
-            <h2>SolaWiki</h2>
-          </div>
-
-          <div class="project-box">
-            <div class="project-container">
-              <img src="assets/calculator.webp" alt="project" />
-              <div class="project-overlay">
-                <button id="calc-open">View Details</button>
-              </div>
-            </div>
-            <h2>Calculator</h2>
-          </div>
-
-          <div class="project-box">
-            <div class="project-container">
-              <img src="assets/todo.webp" alt="project" />
-              <div class="project-overlay">
-                <button id="todo-open">View Details</button>
-              </div>
-            </div>
-            <h2>To-do Manager</h2>
-          </div>
-        </section>
-
-        <!-- Modal -->
-        <section class="projects-modal">
-          <div class="modal-container" id="orca">
-            <div class="modal">
-              <picture><img src="assets/Orca.jpeg" alt="orcawiki" /></picture>
-              <aside>
+            <article class="modal-container" id="orca">
+              <div class="modal">
+                <h1 class="h1-s">Orca Wiki</h1>
+                <picture
+                  ><img class="orca-img" src="assets/Orca.jpeg" alt="orcawiki"
+                /></picture>
                 <button id="orca-close">
                   <i data-feather="x" class="close"></i>
                 </button>
-                <h1>Orca Wiki</h1>
-                <p>
-                  A simple informative website wiki-like to show anything about
-                  one of my favorite ocean hunter, Orca. This website contains
-                  information about how does Orca look like, where is their
-                  habitat and how their diet usually work. I chose Orca as the
-                  subject because I interested in learning more about this
-                  mischievous apex predator.
-                </p>
-                <a class="github" href="#">Open Github</a>
-              </aside>
-            </div>
-          </div>
+                <aside>
+                  <h1 class="h1-l">Orca Wiki</h1>
+                  <p>
+                    A simple informative website wiki-like to show anything
+                    about one of my favorite ocean hunter, Orca. This website
+                    contains information about how does Orca look like, where is
+                    their habitat and how their diet usually work. I chose Orca
+                    as the subject because I interested in learning more about
+                    this mischievous apex predator.
+                  </p>
+                  <a class="github" href="#">Open Github</a>
+                </aside>
+              </div>
+            </article>
+          </section>
 
-          <div class="modal-container" id="solar">
-            <div class="modal">
-              <picture><img src="assets/solar.jpg" alt="solawiki" /></picture>
-              <aside>
+          <section class="solar">
+            <figure class="project-box">
+              <div class="project-container">
+                <img src="assets/solar.jpg" alt="project" />
+                <div class="project-overlay">
+                  <button id="solar-open">View Details</button>
+                </div>
+              </div>
+              <h2>SolaWiki</h2>
+            </figure>
+
+            <article class="modal-container" id="solar">
+              <div class="modal">
+                <h1 class="h1-s">SolaWiki</h1>
+                <picture><img src="assets/solar.jpg" alt="solawiki" /></picture>
                 <button id="solar-close">
                   <i data-feather="x" class="close"></i>
                 </button>
-                <h1>SolaWiki</h1>
-                <p>
-                  A simple informative website wiki-like to show any information
-                  about our solar system. This website contains information
-                  about each planet's characteristic and special features.
-                </p>
-                <a class="github" href="#">Open Github</a>
-              </aside>
-            </div>
-          </div>
+                <aside>
+                  <h1 class="h1-l">SolaWiki</h1>
+                  <p>
+                    A simple informative website wiki-like to show any
+                    information about our solar system. This website contains
+                    information about each planet's characteristic and special
+                    features.
+                  </p>
+                  <a class="github" href="#">Open Github</a>
+                </aside>
+              </div>
+            </article>
+          </section>
 
-          <div class="modal-container" id="calc">
-            <div class="modal">
-              <picture
-                ><img src="assets/calculator.webp" alt="calculator"
-              /></picture>
-              <aside>
+          <section class="calc">
+            <figure class="project-box">
+              <div class="project-container">
+                <img src="assets/calculator.webp" alt="project" />
+                <div class="project-overlay">
+                  <button id="calc-open">View Details</button>
+                </div>
+              </div>
+              <h2>Calculator</h2>
+            </figure>
+
+            <article class="modal-container" id="calc">
+              <div class="modal">
+                <h1 class="h1-s">Calculator</h1>
+                <picture
+                  ><img src="assets/calculator.webp" alt="calculator"
+                /></picture>
                 <button id="calc-close">
                   <i data-feather="x" class="close"></i>
                 </button>
-                <h1>Calculator</h1>
-                <p>
-                  A simple, helpful prototype for daily arithmetics problem.
-                  This prototype included several basic arithmetic operations
-                  such as addition, substraction, multiplication, division. This
-                  prototype also supported decimal number and negative number.
-                </p>
-                <a class="github" href="#">Open Github</a>
-              </aside>
-            </div>
-          </div>
+                <aside>
+                  <h1 class="h1-l">Calculator</h1>
+                  <p>
+                    A simple, helpful prototype for daily arithmetics problem.
+                    This prototype included several basic arithmetic operations
+                    such as addition, substraction, multiplication, division.
+                    This prototype also supported decimal number and negative
+                    number.
+                  </p>
+                  <a class="github" href="#">Open Github</a>
+                </aside>
+              </div>
+            </article>
+          </section>
 
-          <div class="modal-container" id="todo">
-            <div class="modal">
-              <picture><img src="assets/todo.webp" alt="todo" /></picture>
-              <aside>
+          <section class="todo">
+            <figure class="project-box">
+              <div class="project-container">
+                <img src="assets/todo.webp" alt="project" />
+                <div class="project-overlay">
+                  <button id="todo-open">View Details</button>
+                </div>
+              </div>
+              <h2>To-do List</h2>
+            </figure>
+
+            <article class="modal-container" id="todo">
+              <div class="modal">
+                <h1 class="h1-s">To-do List</h1>
+                <picture><img src="assets/todo.webp" alt="todo" /></picture>
                 <button id="todo-close">
                   <i data-feather="x" class="close"></i>
                 </button>
-                <h1>To-do Manager</h1>
-                <p>
-                  A simple prototype program made using JavaScript that utilized
-                  tools for daily productivity. This program included several
-                  essential features such as create new tasks, show tasks list,
-                  rename tasks, and delete tasks.
-                </p>
-                <a class="github" href="#">Open Github</a>
-              </aside>
-            </div>
-          </div>
-        </section>
+                <aside>
+                  <h1 class="h1-l">To-do List</h1>
+                  <p>
+                    A simple prototype program made using JavaScript that
+                    utilized tools for daily productivity. This program included
+                    several essential features such as create new tasks, show
+                    tasks list, rename tasks, and delete tasks.
+                  </p>
+                  <a class="github" href="#">Open Github</a>
+                </aside>
+              </div>
+            </article>
+          </section>
+        </div>
       </div>
 
       <div class="contact" id="contact">

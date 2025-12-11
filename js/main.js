@@ -31,9 +31,7 @@ projects.forEach((name) => {
 });
 
 // Close modal when clicking outside
-const container = document.querySelectorAll(".modal-container");
-
-container.forEach((element) => {
+document.querySelectorAll(".modal-container").forEach((element) => {
   element.addEventListener("click", (e) => {
     if (e.target === element) {
       element.classList.remove("modal-show");

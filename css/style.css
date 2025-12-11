@@ -256,6 +256,7 @@ html {
   background-color: var(--background-secondary);
   padding: 50px 4rem;
   scroll-margin-top: 40px;
+  color: var(--dark);
 }
 
 .skill h1 {
@@ -304,6 +305,7 @@ html {
   padding: 50px 4rem;
   background-color: var(--background);
   scroll-margin-top: 40px;
+  color: var(--dark);
 }
 
 .project h1 {
@@ -504,6 +506,7 @@ html {
   padding: 50px 5rem;
   background-color: var(--background-secondary);
   scroll-margin-top: 40px;
+  color: var(--dark);
 }
 
 .contact h1 {

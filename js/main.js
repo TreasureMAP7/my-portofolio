@@ -1,15 +1,17 @@
-// Dropdown
+// Dropdown Hamburger
 document.getElementById("dropdown-icon").addEventListener("click", () => {
- document.getElementById("dropdown-content").classList.toggle("dropdown-show");
+  document.getElementById("dropdown-content").classList.toggle("dropdown-show");
 });
 
 document.querySelectorAll(".dropdown-anchor").forEach((el) => {
   el.addEventListener("click", () => {
-    document.getElementById("dropdown-content").classList.toggle("dropdown-show");
+    document
+      .getElementById("dropdown-content")
+      .classList.toggle("dropdown-show");
   });
 });
 
-// Modal function
+// Modal
 function modalOpen(element) {
   element.classList.add("modal-show");
 }
@@ -18,7 +20,7 @@ function modalClose(element) {
   element.classList.remove("modal-show");
 }
 
-// Open Modal
+// Buka dan tutup modal
 let projects = ["orca", "solar", "calc", "todo"];
 
 projects.forEach((name) => {
@@ -30,7 +32,7 @@ projects.forEach((name) => {
     .addEventListener("click", () => modalClose(document.getElementById(name)));
 });
 
-// Close modal when clicking outside
+// Tutup modal diluar card
 document.querySelectorAll(".modal-container").forEach((element) => {
   element.addEventListener("click", (e) => {
     if (e.target === element) {
@@ -39,8 +41,8 @@ document.querySelectorAll(".modal-container").forEach((element) => {
   });
 });
 
-// Clear Form
-document.addEventListener("DOMContentLoaded", () => {
+// Menghapus form saat refresh
+window.addEventListener("load", () => {
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
   document.getElementById("subject").value = "";

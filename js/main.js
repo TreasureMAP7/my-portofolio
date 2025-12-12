@@ -41,10 +41,10 @@ document.querySelectorAll(".modal-container").forEach((element) => {
   });
 });
 
-// Menghapus form saat refresh
-window.addEventListener("load", () => {
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("subject").value = "";
-  document.getElementById("message").value = "";
+// Reset form setelah submit
+const form = document.getElementById("form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  form.submit();
+  form.reset();
 });
